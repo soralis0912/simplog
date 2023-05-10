@@ -28,7 +28,7 @@
 {{ if .Params.ogimage }}
 <meta property="og:image" content="{{ $site.BaseURL }}{{ .File.Dir }}img/ogp/{{ .File.BaseFileName }}.png">
 {{ else }}
-<meta property="og:image" content="{{ $site.BaseURL }}/images/ogp.png">
+<meta property="og:image" content="{{ $site.BaseURL }}images/ogp.png">
 {{ end }}
 <meta name="twitter:card" content="summary_large_image" /></meta>
 <meta name="twitter:site" content="@{{ $site.Params.Twitter }}"></meta>
@@ -39,7 +39,7 @@
 {{ if .Params.ogimage }}
 <meta property="og:image" content="{{ $site.BaseURL }}{{ .File.Dir }}img/ogp/{{ .File.BaseFileName }}.png">
 {{ else }}
-<meta property="og:image" content="{{ $site.BaseURL }}/images/ogp.png">
+<meta property="og:image" content="{{ $site.BaseURL }}images/ogp.png">
 {{ end }}
 
 <link rel="stylesheet" href="{{ "/css/main.css" | relURL }}?c={{$cacheHashBase}}">
