@@ -25,7 +25,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="{{ $site.Title }}">
 <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ $site.Params.description }}{{ end }}">
-{{ with .Params.ogimage }}
+{{ if .Params.ogimage }}
 <meta property="og:image" content="{{ $site.BaseURL }}{{ .File.Dir }}img/ogp/{{ .File.BaseFileName }}.png">
 {{ else }}
 <meta property="og:image" content="{{ $site.BaseURL }}/images/ogp.jpg">
@@ -36,7 +36,7 @@
 <meta name="twitter:title" content="{{ if .IsHome }}{{ $site.Title }}{{ else }}{{ .Title }} - {{ $site.Title }}{{ end }}"></meta>
 <meta name="twitter:url" content="{{ .Permalink }}"></meta>
 <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ $site.Params.description }}{{ end }}"></meta>
-{{ with .Params.ogimage }}
+{{ if .Params.ogimage }}
 <meta property="og:image" content="{{ $site.BaseURL }}{{ .File.Dir }}img/ogp/{{ .File.BaseFileName }}.png">
 {{ else }}
 <meta property="og:image" content="{{ $site.BaseURL }}/images/ogp.jpg">
