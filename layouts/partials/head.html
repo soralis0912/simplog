@@ -26,9 +26,9 @@
 <meta property="og:site_name" content="{{ $site.Title }}">
 <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ $site.Params.description }}{{ end }}">
 {{ with .Params.ogimage }}
-<meta property="og:image" content="{{ $site.BaseURL }}{{ . }}">
+<meta property="og:image" content="{{ $site.BaseURL }}{{ .File.Dir }}img/ogp/{{ .File.BaseFileName }}.png">
 {{ else }}
-<meta property="og:image" content="{{ $site.BaseURL }}/images/featured_image.jpg">
+<meta property="og:image" content="{{ $site.BaseURL }}/images/ogp.jpg">
 {{ end }}
 <meta name="twitter:card" content="summary_large_image" /></meta>
 <meta name="twitter:site" content="@{{ $site.Params.Twitter }}"></meta>
@@ -37,9 +37,9 @@
 <meta name="twitter:url" content="{{ .Permalink }}"></meta>
 <meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ $site.Params.description }}{{ end }}"></meta>
 {{ with .Params.ogimage }}
-<meta property="og:image" content="{{ $site.BaseURL }}{{ . }}">
+<meta property="og:image" content="{{ $site.BaseURL }}{{ .File.Dir }}img/ogp/{{ .File.BaseFileName }}.png">
 {{ else }}
-<meta property="og:image" content="{{ $site.BaseURL }}/images/featured_image.jpg">
+<meta property="og:image" content="{{ $site.BaseURL }}/images/ogp.jpg">
 {{ end }}
 
 <link rel="stylesheet" href="{{ "/css/main.css" | relURL }}?c={{$cacheHashBase}}">
