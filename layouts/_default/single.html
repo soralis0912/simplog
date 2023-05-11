@@ -28,6 +28,11 @@
 <!-- Content footer -->
 <hr class="block-separater">
 
+<div class="content-footer-item">
+	<a href="https://twitter.com/share?ref_src={{ .Permalink }}" class="twitter-share-button" data-show-count="false">Tweet</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 <!--Tag-->
 {{ $tags := .GetTerms "tags" }}
 {{ if gt (len $tags) 0 }}
@@ -38,7 +43,6 @@
 	{{end}}
 </div>
 {{ end }}
-
 <!-- disqus -->
 {{ if and (eq .Params.comments true) (eq .Site.Params.Enabled.Comment true) }}
 	{{ template "_internal/disqus.html" . }}
