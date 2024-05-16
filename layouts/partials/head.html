@@ -50,6 +50,12 @@
 <link rel="stylesheet" href="{{ . | relURL }}?c={{$cacheHashBase}}">
 {{ end }}
 
+{{ with .Params.relcanonical }}
+  <link rel="canonical" href="{{ . }}" itemprop="url" />
+{{ else -}}
+  <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+{{ end -}}
+
 {{ with $site.Params.AdobeFontsKitId }}
 <!-- Adobe Fonts -->
 <script>
